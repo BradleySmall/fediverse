@@ -1,80 +1,106 @@
-* Fediverse
-
-The fediverse is a collection of federated applications that use common  
-protocols and decentralized servers. I will be focusing mainly on Mastodon.
-
-** Social Media
-*** Why do people use it
-    1. To stay in touch with what friends are doing (42%)
-    2. To stay up-to-date with news and current events (41%)
-    3. To fill up spare time (39%)
-    4. To find funny or entertaining content (37%)
-    5. General networking with other people (34%)
-    6. Because friends are already on them (33%)
-    7. To share photos or videos with others (32%)
-    8. To share my opinion (30%)
-    9. To research new products to buy (29%)
-    10. To meet new people (27%)
-*** Why people avoid it
-    1. Find it a time waste. 
-    2. Don't want to take the time to learn how.
-    3. Not intertested in it. 
-    4. Don't see any value in it.
-    5. Concerned about their information/identity getting out.
-    6. Privacy and advertising concerns. 
-*** Why do businesses use it
-    1. Gaining traffic
-    2. Interacting with your customers
-    3. Increased sales
-    4. Reputation management
-    5. Marketing research
-    6. Inexpensive
-    7. The reach is global
-    8. Save on advertising
-    9. 2.82 Billion people worldwide on social media
-
-** Silos
-
+#+TITLE: The Fediverse and Mastadon
+* Social Media
+** Why do people use it (Top 10 from Pew)
+1. To stay in touch with what friends are doing (42%)
+2. To stay up-to-date with news and current events (41%)
+3. To fill up spare time (39%)
+4. To find funny or entertaining content (37%)
+5. General networking with other people (34%)
+6. Because friends are already on them (33%)
+7. To share photos or videos with others (32%)
+8. To share my opinion (30%)
+9. To research new products to buy (29%)
+10. To meet new people (27%)
+** Why people avoid it
+- Find it a time waste. 
+- Don't want to take the time to learn how.
+- Not intertested in it. 
+- Don't see any value in it.
+- Concerned about their information/identity getting out.
+- Privacy and advertising concerns. 
+** Why do businesses use it
+- Gaining traffic
+- Interacting with your customers
+- Increased sales
+- Reputation management
+- Marketing research
+- Inexpensive
+- The reach is global
+- Save on advertising
+- 2.82 Billion people worldwide on social media
+* Silos
 The silos are centralized monolithic servers that control all the data,  
 identities, and access.  
+- Facebook
+- YouTube
+- Instagram
+- Twitter
+- Google+
+- Instagram
+- Tumblr
+- Pintrest
+* Federated Alternatives
 
-    1. Facebook
-    2. YouTube
-    3. Instagram
-    4. Twitter
-    5. Google+
-    6. Instagram
-    7. Tumblr
-    8. Pintrest
+The fediverse is a collection of federated applications that use common  
+protocols and decentralized servers. They are made up of free and open  
+source software. I will be focusing mainly on Mastodon.
 
-*** Federated Alternatives
-    1. Mastodon
-    2. Pleroma
-    3. GNU Social
-    4. Gab
-    5. Pixelfed
-    6. PeerPx
-    7. Peertube
-    8. Funkwhale
-    9. Friendica
-    10. Diaspora
-    11. Hubzilla
-    12. Nextcloud
-    13. Plume
-    14. WriteFreely
-    15. MissKey
-    16. And many more every day
-
-*** Protocols
-    1. ActiviryPub
-    2. DFRN
-    3. Diaspora Network
-    4. OStatus
-    5. XMPP
-    6. Zot & Zot6
-
-** Mastodon
-
+- Mastodon
+- Pleroma
+- GNU Social
+- Gab
+- Pixelfed
+- PeerPx
+- Peertube
+- Funkwhale
+- Friendica
+- Diaspora
+- Hubzilla
+- Nextcloud
+- Plume
+- WriteFreely
+- MissKey
+- And many more every day
+** Protocols
+- ActivityPub ::
+   This is the key to Mastodon and most of the current servers. This is why  
+   the are all able to federate together. Possibly the last good thing to 
+   come out of W3C before their anit-piracy controversy.  
+- OStatus ::
+   This was the beginning and got GNUSocial off the ground. But after the  
+   wide adoption of AvtivityPub only Friendica and GNU Social still support  
+   this.
+- DFRN ::
+   Distributed Friends and Relations Network protocol. Supported by 
+   Friendica but I am not sure of another. 
+- Diaspora Network ::
+   This protocol is supported by Diaspora and Friendica. 
+- XMPP ::
+   This is messaging protocol. It is also federated and distributed. There  
+   is no big central authority, and you can run your own server. Everyone  
+   gets their own JID and with "transports" can even intereact between  
+   non XMPP servers.
+- Zot & Zot6 ::      
+   This is used in Hubzilla. Communications are excrypted at both ends.
+- Atom, Activity Streams, WebSub, Salmon, and WebFinger ::
+   These where the start of many of these protocols. They choose to be  
+   able to connect to these open protocols for social networking.   
+** Microblogging
+Most people know what blogging is. A blog site resembles a periodical magazine  
+in that a specific topic or even a stream of consciousness it explored by an  
+author and published daily, weekly, monthly, or perhaps with a little less  
+disciplined schedule. Then there is Microblogging. This is what is most  
+associated with Twitter. Short messages (originally 140 characters or less)  
+are published in short periods of time sometimes many multiple times per day.  
+The author may have an audience, like our current President. Or perhaps hopes  
+to establish an audience of followers that engage such small blogs with  
+reactive commentary, republishing, and sharing. Or by simply upvoting them.  
+Twitter has shown this to be an effecive medium, and many people have bought  
+into it either as consumers or content creators. As such, content creators  
+have become influencers and even derived income from companies wanting them  
+to mention, use, or otherwise display their wares. And to paraphrase the 
+famous  George and Ira Gershwin "It's nice work if you can it!"
+* Mastodon
 Because Mastadon uses ActivityPub any other server that uses it can share data  
 like toots or whatever each of them calls their posts. For instance, I an share  
 a video on PeerTube, share and boost and comment on it from Mastadon and others  
@@ -145,24 +171,40 @@ issue this causes.
 
 If you are interested there are instance finders, node lists and other helpful  
 sites that you can start with. 
-- https://joinmastodon.org/ 
-- https://instances.social/
+- Lets you pick an instnace from some criteria :: https://joinmastodon.org/ 
+- Quickstart, choose lanugage and some criteria :: https://instances.social/
+- Blog about software changes and general info :: https://blog.joinmastodon.org/  
+- Place where you can follow people with similar interests :: https://communitywiki.org/trunk/
+- How to setup a Mastodon instance :: https://tinyurl.com/y7bcwldf 
+- How to setup a Pleroma instance  :: https://tinyurl.com/wtr3wrw
+- News about the Fediverse and links and information on different services :: https://fediverse.party/
+- Emacs interface into Mastodon :: https://github.com/jdenen/mastodon.el
+- Vim interface into Mastodon :: https://github.com/mattn/vim-mastodon
+- Electron interface into Mastodon :: https://github.com/h3poteto/whalebird-desktop
 
 Or if you know of a specific instance (like if a friend tells you theirs) you can  
 just go to it and if they are open to new users you can join. 
-
-** Recent Influx
+* Recent Influx
 Free Speech has been a big reason for people leaving Twitter and Tumblr for Mastadon.  
 The latest big move was due to one of India's Supreme Court lawyers (Sanjay Hegde)  
 having his Twitter account suspended twice. Once for an image of August Landmesser,  
 refusing to perform the Nazi salute and again for a poem that protested the hanging of  
 two revolutionaries. 
-- http://tiny.cc/hvhdgz
+- BBC News Article :: http://tiny.cc/hvhdgz
 
-I leave you to make your own decisions on this. 
+It is interesting that Free Speech is as common a reason for people to flock to the  
+Fediverse as any other. However, the general bent of the Fediverse tends to lean more  
+toward safe spaces and places to avoid abuseive treatment. There are plenty of tools  
+available for moderation of both you own personal views of the network, as well as  
+to those running instances to currate how those on their instance will experience it.  
+This has met with some controversy in itself, as those wanting ultimate free speech  
+and those who don't want to be insulted or have their beliefs challenged come to be 
+at odds with one another.  This does make for some drama, but again, you are free  
+to choose an instance that falls in line with your beliefs on these matters, even if  
+that means you are in one that tries to be completely self contained. And if you 
+find you are not happy where you are, you can move all your data, and everything to  
+another instance. The tools are there that make it simple. 
 
-** My Links **
-- http://bradleysmall.com/
-
-** Read More **
-- http://tiny.cc/pwhdgz
+- My Links :: http://bradleysmall.com/
+- Read More :: https://wiki.freedombone.net/
+ 
